@@ -1,43 +1,40 @@
-n = int(input()) #Station
-m = int(input()) #money
+Station = int(input()) #Station
+money = int(input()) #money
 moneyCoin = 0
 fare = [27, 35, 42]
 
-def CountCoin(m):
-    moneyCoin = m/10
+def CountCoin(money):
+    moneyCoin = money/10
     print(int(moneyCoin))
-    m %= 10
+    money %= 10
 
-    moneyCoin = m/5
+    moneyCoin = money/5
     print(int(moneyCoin))
-    m %= 5
+    money %= 5
         
-    moneyCoin = m/2
+    moneyCoin = money/2
     print(int(moneyCoin))
-    m %= 2
+    money %= 2
         
-    moneyCoin = m/1
+    moneyCoin = money/1
     print(int(moneyCoin))
-    m %= 1
+    money %= 1
 
-if n == 1:
-    change = m - fare[0]
+if Station == 1:
+    change = money - fare[0]
     if change >= 0:
         CountCoin(change)
     elif change < 0:
         print("จำนวนเงินไม่เพียงพอ")
-
-if n == 2:
-    change = m - fare[1]
+if Station == 2:
+    change = money - fare[1]
     if change >= 0:
         CountCoin(change)
     elif change < 0:
         print("จำนวนเงินไม่เพียงพอ")
-
-if n == 3:
-    change = m - fare[2]
+if Station == 3:
+    change = money - fare[2]
     if change >= 0:
         CountCoin(change)
     elif change < 0:
         print("จำนวนเงินไม่เพียงพอ")
-
