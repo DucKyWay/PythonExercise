@@ -37,6 +37,8 @@ if money_1 <= 20000:
                 money_sum %= 100
                 if moneyOver > 0:
                     money_sum = money_sum + (moneyOver * 100)
+            else:
+                print("Input Error")
         else:
             print("Input Error")
     else:
