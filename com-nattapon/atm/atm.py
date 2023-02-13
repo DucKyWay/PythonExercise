@@ -13,33 +13,30 @@ if money_1 <= 20000:
             if money_sum >= 100:
                 moneyCash = money_sum / 1000
                 moneyOver = moneyCash-20
-                print("money over: ", moneyOver)
                 if moneyOver > 0:
                     moneyCash -= moneyOver
-                    money_sum += (moneyOver * 1000)
-                    print("sum : ", money_sum)
-                    print("money over", moneyOver)
                 print(int(moneyCash))
-                print("test : ", money_sum)
-                money_sum //= 1000
-
-                print("test ", money_sum)
+                money_sum %= 1000
+                if moneyOver > 0:
+                    money_sum = money_sum + (moneyOver * 1000)
 
                 moneyCash = money_sum / 500
                 moneyOver = moneyCash - 20
                 if moneyOver > 0:
                     moneyCash -= moneyOver
-                    money_sum += (moneyOver * 500)
                 print(int(moneyCash))
-                money_sum //= 500
+                money_sum %= 500
+                if moneyOver > 0:
+                    money_sum = money_sum + (moneyOver * 500)
 
                 moneyCash = money_sum / 100
                 moneyOver = moneyCash - 20
                 if moneyOver > 0:
                     moneyCash -= moneyOver
-                    money_sum += (moneyOver * 100)
                 print(int(moneyCash))
-                money_sum //= 100
+                money_sum %= 100
+                if moneyOver > 0:
+                    money_sum = money_sum + (moneyOver * 100)
         else:
             print("Input Error")
     else:
