@@ -10,6 +10,6 @@ while balance > 0:
         hour_left = balance / hour
     elif balance >= 60: #min
         minute = balance // 60
-        minute_left = balance / minute
+        min_left = balance / minute
 
-print(day_left, hour_left, minute_left)
+print(day_left, hour_left, min_left, sec_left)
