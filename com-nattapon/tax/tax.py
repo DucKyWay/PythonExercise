@@ -16,7 +16,6 @@ for i in range(4):
         tax[i] = list[i] * (10/100)
     elif list[i] > 1000000:
         tax[i] = list[i] * (20/100)
-    i += 1
 
 total_tax = sum(tax)
 print(f'{total_tax:.2f}')
