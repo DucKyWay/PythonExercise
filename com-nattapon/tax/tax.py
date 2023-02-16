@@ -10,7 +10,7 @@ i = 0
 for i in range(4):
     if list[i] < 100000:
         tax[i] = 0
-    if list[i] >= 100000 and list[i] <= 500000:
+    elif list[i] >= 100000 and list[i] <= 500000:
         tax[i] = list[i] * (5/100)
     elif list[i] >= 500001 and list[i] <= 1000000:
         tax[i] = list[i] * (10/100)
